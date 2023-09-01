@@ -17,7 +17,7 @@ def luhn(credit):
         else:
             digit = num
         doubled.append(digit)
-    print(doubled)
+    
 
     size = len(doubled)
     for i in range(0, size):
@@ -38,3 +38,7 @@ def luhn(credit):
 if __name__ == "__main__":
     credit = input(
         "Please enter your credit card number. Please note this number will not be shared with anyone ")
+    if luhn(credit):
+        print(credit , "is valid")
+    else:
+        print(credit , "is invalid")
